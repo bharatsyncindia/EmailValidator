@@ -21,5 +21,5 @@ isValid() will return true if the valid email otherwise false.
 # Add the dependency
 
 	dependencies {
-	        implementation 'com.github.android-rk:EmailValidator:1.0'
+	        implementation 'com.github.android-rk:EmailValidator:1.1'
 	}
