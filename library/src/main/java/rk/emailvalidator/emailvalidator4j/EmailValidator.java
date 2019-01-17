@@ -1,5 +1,7 @@
 package rk.emailvalidator.emailvalidator4j;
 
+import android.text.TextUtils;
+
 import java.util.Collections;
 import java.util.List;
 
@@ -11,11 +13,12 @@ public final class EmailValidator {
     private final Email parser = new Email(new EmailLexer());
     private List<ValidationStrategy> validators = Collections.emptyList();
 
-    public EmailValidator (List<ValidationStrategy> validators) {
+    public EmailValidator(List<ValidationStrategy> validators) {
         this.validators = validators;
     }
 
-    public EmailValidator () {}
+    public EmailValidator() {
+    }
 
     public boolean isValid(String email) {
         boolean parserResult = true;
@@ -33,8 +36,18 @@ public final class EmailValidator {
         for (ValidationStrategy validator : this.validators) {
             validatorsResult = validatorsResult && validator.isValid(email, this.parser);
         }
-
-        return validatorsResult;
+        //ravi changes here
+        boolean b = validatorsResult;
+        if (!TextUtils.isEmpty(email) && email.contains("@")) {
+            String[] arr = email.split("@");
+            if (arr != null && arr.length == 2) {
+                if (!arr[1].contains(".")) {
+                    b = false;
+                }
+            }
+        }
+        //end
+        return b;
     }
 
     public boolean hasWarnings() {
