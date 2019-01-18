@@ -8,7 +8,7 @@ Validate the IDN email address .
 EmailValidator emailValidator=new EmailValidator();
 emailValidator.isValid("your email to be validated");
 
-isValid() will return true if the valid email 
+isValid() will return true if the valid email <br/>
 otherwise false.
 
 
@@ -25,36 +25,37 @@ otherwise false.
 	dependencies {
 	        implementation 'com.github.android-rk:EmailValidator:1.1'
 	}
+	
 # Tested Email Addresses:
-hi@stavros.io			 	valid
-hi@			 		invalid
-hi+there@stavros.io			valid
-hi@stavros.io			 	valid
-stavros.k@stavros.io			valid
-stavros.@stavros.io			invalid
-stavros..k@stavros.io			invalid
-!#$%&'*(-/=?@stavros.io			nvalid
-f*ck@stavros.io			 	valid
-#$%!^/&@stavros.io			valid
-h(a)i@stavros.io			invalid
-{sta}vros@stavros.io			valid
-stavros@stavros.io{io}			valid
-em@il@stavros.io			invalid
-"<\"@\".!#%$@stavros.io			invalid
-<\"@\\".!#%$@stavros.io			invalid
-"hi@you"@stavros.io			valid
-"hi you"@stavros.io			valid
-" "@stavros.io			 	valid
-hi"@"you@stavros.io			invalid
-"<\"@\\".!.#%$@stavros.io		invalid
-hi\there@stavros.io			invalid
-cow@[dead::beef]			invalid
-stavros@io			 	invalid
-拉爾@雅虎.在			            valid
-1@23456789				invalid
-1@[23456789]			 	invalid
-रवि@डाटामेल.भारत			  valid
-ราวี@ดาต้าเมล.ไทย			  valid
-ravi@datamail.in.th			valid
-රවී@දත්තතැපැල.ලංකා			  valid
-रवि@डाटा			 	 invalid
+hi@stavros.io			 	valid <br/>
+hi@			 		invalid<br/>
+hi+there@stavros.io			valid<br/>
+hi@stavros.io			 	valid<br/>
+stavros.k@stavros.io			valid<br/>
+stavros.@stavros.io			invalid<br/>
+stavros..k@stavros.io			invalid<br/>
+!#$%&'*(-/=?@stavros.io			invalid<br/>
+f*ck@stavros.io			 	valid<br/>
+#$%!^/&@stavros.io			valid<br/>
+h(a)i@stavros.io			invalid<br/>
+{sta}vros@stavros.io			valid<br/>
+stavros@stavros.io{io}			valid<br/>
+em@il@stavros.io			invalid<br/>
+"<\"@\".!#%$@stavros.io			invalid<br/>
+<\"@\\".!#%$@stavros.io			invalid<br/>
+"hi@you"@stavros.io			valid<br/>
+"hi you"@stavros.io			valid<br/>
+" "@stavros.io			 	valid<br/>
+hi"@"you@stavros.io			invalid<br/>
+"<\"@\\".!.#%$@stavros.io		invalid<br/>
+hi\there@stavros.io			invalid<br/>
+cow@[dead::beef]			invalid<br/>
+stavros@io			 	invalid<br/>
+拉爾@雅虎.在			            valid<br/>
+1@23456789				invalid<br/>
+1@[23456789]			 	invalid<br/>
+रवि@डाटामेल.भारत			  valid<br/>
+ราวี@ดาต้าเมล.ไทย			   valid<br/>
+ravi@datamail.in.th			valid<br/>
+රවී@දත්තතැපැල.ලංකා			  valid<br/>
+रवि@डाटा			 	 invalid<br/>
