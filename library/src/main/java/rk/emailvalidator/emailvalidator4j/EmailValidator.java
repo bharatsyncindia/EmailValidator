@@ -22,6 +22,10 @@ public final class EmailValidator {
 
     public boolean isValid(String email) {
         boolean parserResult = true;
+        if(!isValidString(email))
+        {
+            return  false;
+        }
         try {
             this.parser.parse(email);
         } catch (InvalidEmail invalidEmail) {
@@ -29,6 +33,9 @@ public final class EmailValidator {
         }
 
         return parserResult && this.applyValidators(email);
+    }
+    public static boolean isValidString(String input) {
+        return !input.matches(".*[~<>{/}=?+&'^%$#!`{}|].*");
     }
 
     private boolean applyValidators(String email) {
